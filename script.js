@@ -16,8 +16,9 @@ var APIKey = 'e7610467436ab1c59773adeceb236ff7'
                 $('.temp').text('Temperature: (F)' + response.main.temp)
                 $('.humidity').text('Humidity:' + response.main.humidity)
                 $('.windSpeed').text('Wind Speed:' + response.wind.speed)
-                console.log("Humidity: " + response.main.humidity)
+                $('.clouds').text('Clouds:' + response.clouds.all)
                 
+                localStorage.setItem('.city', response)
             });
         }
 
